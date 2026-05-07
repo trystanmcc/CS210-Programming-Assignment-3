@@ -133,8 +133,18 @@ void printPath(pair<int,int> exitcell,
 
             if (nr >= 0 && nr < N && nc >= 0 && nc < M && !visited[nr][nc])
             {
+                visited[nr][nc] = true;
+                parent_r[nr][nc] = r;
+                parent_c[nr][nc] = c;
+
+                if (dfs(nr, nc, maze, visited, parent_r, parent_c, exit_r, exit_c))
+                {
+                    return true;
+                }
             }
         }
+
+        return false;
     }
 
 
