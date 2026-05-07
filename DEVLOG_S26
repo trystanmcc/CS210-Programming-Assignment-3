@@ -29,71 +29,73 @@ Each entry may be one of the following:
 ---
 
 ### Entry 1
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
-**Task worked on:**  
-**Issue or decision:**  
-**Error message / symptom (if applicable):**  
-**What I tried:**  
-**Fix / resolution (or final decision):**  
-**Commit(s):**  
+**Date:** 2026-05-06  
+**Entry Type:** Engineering Decision  
+**Task worked on:**  Set-up function
+**Issue or decision:**  Created arraylist/vectors for maze, visited, coordinate of parent of current node
+**Error message / symptom (if applicable):**  Not applicable
+**What I tried:**  I had thought about other data storage but replicated the pre-coded vectors in my parameters
+**Fix / resolution (or final decision):**  Parameters "int r, int c, vector<vector<int>>& maze, vector<vector<bool>>& visited, vector<vector<int>>& parent_r, vector<vector<int>>& parent_c, int exit_r, int exit_c"
+**Commit(s):**  Added paramters for the depth first search function
 
 ---
 
 ### Entry 2
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
-**Task worked on:**  
-**Issue or decision:**  
-**Error message / symptom (if applicable):**  
-**What I tried:**  
-**Fix / resolution (or final decision):**  
-**Commit(s):**  
+**Date:** 2026-05-06  
+**Entry Type:** Edge Case 
+**Task worked on:**  Recursive function
+**Issue or decision:**  Had to recurse into next cell depending on marked cells
+**Error message / symptom (if applicable):**  N/A
+**What I tried:**  I tried the wrong logic on the recursive call which lead to the wrong stopping point
+**Fix / resolution (or final decision):**  I have to recurse after checking bounds walls and visited
+**Commit(s):**  Fully implemented depth first search
 
 ---
 
 ### Entry 3
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
-**Task worked on:**  
-**Issue or decision:**  
-**Error message / symptom (if applicable):**  
-**What I tried:**  
-**Fix / resolution (or final decision):**  
-**Commit(s):**  
+**Date:** 2026-05-06  
+**Entry Type:** Engineering Decision  
+**Task worked on:**  Depth First Search
+**Issue or decision:**  Used recursive call to find the exit
+**Error message / symptom (if applicable):**  N/A
+**What I tried:**  I recognized using recursion on the depth first search would end at the appriopriate time
+**Fix / resolution (or final decision):**  Used a recursive call for the function
+**Commit(s):**  Fully implemented depth first search
 
 ---
 
 ### Entry 4
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
-**Task worked on:**  
-**Issue or decision:**  
-**Error message / symptom (if applicable):**  
-**What I tried:**  
-**Fix / resolution (or final decision):**  
-**Commit(s):**  
+**Date:** 2026-05-06  
+**Entry Type:** Bug Fix  
+**Task worked on:**  Depth First Search Running
+**Issue or decision:**  Clion runs on 17 version leading to errors in syntax
+**Error message / symptom (if applicable):**  vector<vector<int>> parent_c(N, vector<int>(M, -1));
+      |                      ^~
+      |                      > >
+**What I tried:**  I tried to update my clion through cmake and rebuilding
+**Fix / resolution (or final decision):**  I had to run through the terminal running through an older clion version
+**Commit(s):**  Fully implemented depth first search
 
 ---
 
 ### Entry 5
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
-**Task worked on:**  
-**Issue or decision:**  
-**Error message / symptom (if applicable):**  
-**What I tried:**  
-**Fix / resolution (or final decision):**  
-**Commit(s):**  
+**Date:** 2026-05-06  
+**Entry Type:** Edge Case  
+**Task worked on:** Calling DFs
+**Issue or decision:**  Edge case if enterance is visited multiple times
+**Error message / symptom (if applicable):**  Would pass through enterance again if not marked visited
+**What I tried:**  I naturally passed through the enterance and found the exit before passing backwards but to practice good edge cases I added the visited ent
+**Fix / resolution (or final decision):**  Marked enterance as visited at start of call
+**Commit(s):**  Marked enterance as visited
 
 ---
 
 ### Entry 6
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
-**Task worked on:**  
-**Issue or decision:**  
-**Error message / symptom (if applicable):**  
-**What I tried:**  
-**Fix / resolution (or final decision):**  
-**Commit(s):**  
+**Date:** 2026-05-06  
+**Entry Type:** Edge Case  
+**Task worked on:**  running printPath
+**Issue or decision:**  When running check if bool found is true to print
+**Error message / symptom (if applicable):**  If no edge case existed it would crash if no path was found
+**What I tried:**  Had code for edge case built in
+**Fix / resolution (or final decision):**  Have a print for no paths and run printpath if exist
+**Commit(s):**  Uncommented student implementation tasks
