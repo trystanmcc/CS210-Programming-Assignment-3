@@ -131,7 +131,7 @@ void printPath(pair<int,int> exitcell,
             int nr = r + dr[i];
             int nc = c + dc[i];
 
-            if (nr >= 0 && nr < N && nc >= 0 && nc < M && !visited[nr][nc])
+            if (nr >= 0 && nr < N && nc >= 0 && nc < M && !visited[nr][nc] && maze[nr][nc] == 0)
             {
                 visited[nr][nc] = true;
                 parent_r[nr][nc] = r;
